@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Artby Suff | Islamic Art & Décor</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f5ee;
+            color: #26352d;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: #173c2b;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #d7b56d;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(15, 45, 32, 0.75),
+                    rgba(15, 45, 32, 0.75)
+                ),
+                url("https://images.unsplash.com/photo-1542816417-098367d5b2a4?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #c49b52;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #a9803d;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            color: #173c2b;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* ABOUT */
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* COLLECTION */
+        .products {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            color: #173c2b;
+            margin-bottom: 8px;
+        }
+
+        .card-content p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* VERSE */
+        .verse {
+            background: #173c2b;
+            color: white;
+            text-align: center;
+        }
+
+        .verse h2 {
+            color: #d7b56d;
+            margin-bottom: 20px;
+        }
+
+        .verse p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 24px;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 15px 0;
+            font-size: 17px;
+        }
+
+        .contact a {
+            color: #173c2b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #10291e;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer span {
+            color: #d7b56d;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+
+        <div class="logo">
+            Artby Suff
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Artby Suff</h1>
+
+            <p>
+                Islamic Art • Arabic Calligraphy • Décor
+                <br>
+                Beautiful artwork inspired by faith,
+                culture and Islamic teachings.
+            </p>
+
+            <a href="#collection" class="button">
+                Explore Collection
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <div class="section-title">
+
+            <h2>About Artby Suff</h2>
+
+            <p>
+                Art with meaning, faith and beauty.
+            </p>
+
+        </div>
+
+        <div class="about">
+
+            <p>
+                Welcome to <strong>Artby Suff</strong> — a creative
+                space dedicated to beautiful Islamic artwork
+                and décor.
+            </p>
+
+            <br>
+
+            <p>
+                Our collection includes Arabic calligraphy,
+                Qur'anic verses, Islamic teachings, decorative
+                paintings and personalised artwork.
+            </p>
+
+            <br>
+
+            <p>
+                Every piece is created to bring elegance,
+                meaning and a touch of Islamic art into
+                your home or special space.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COLLECTION -->
+    <section id="collection">
+
+        <div class="section-title">
+
+            <h2>Our Collection</h2>
+
+            <p>
+                Explore our Islamic-inspired artwork.
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=800&q=80">
+
+                <div class="card-content">
+
+                    <h3>Arabic Calligraphy</h3>
+
+                    <p>
+                        Elegant Arabic calligraphy artwork
+                        for modern and traditional interiors.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=800&q=80">
+
+                <div class="card-content">
+
+                    <h3>Qur'anic Verses</h3>
+
+                    <p>
+                        Meaningful artwork featuring selected
+                        Qur'anic verses and Islamic teachings.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=800&q=80">
+
+                <div class="card-content">
+
+                    <h3>Islamic Décor</h3>
+
+                    <p>
+                        Decorative pieces inspired by
+                        Islamic patterns and traditions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=800&q=80">
+
+                <div class="card-content">
+
+                    <h3>Custom Artwork</h3>
+
+                    <p>
+                        Personalised artwork created according
+                        to your preferred design or theme.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ISLAMIC VERSE -->
+    <section class="verse">
+
+        <h2>Faith • Art • Beauty</h2>
+
+        <p>
+            "Indeed, Allah is with those who are mindful
+            of Him and those who do good."
+        </p>
+
+        <br>
+
+        <small>
+            Qur'an 16:128
+        </small>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <div class="section-title">
+
+            <h2>Contact Artby Suff</h2>
+
+            <p>
+                Interested in an artwork or want a custom piece?
+            </p>
+
+        </div>
+
+
+        <div class="contact">
+
+            <p>
+                📞 Phone:
+                <a href="tel:+918792413157">
+                    +91 87924 13157
+                </a>
+            </p>
+
+
+            <p>
+                💬 WhatsApp:
+                <a href="https://wa.me/918792413157">
+                    +91 87924 13157
+                </a>
+            </p>
+
+
+            <p>
+                📧 Email:
+                <a href="mailto:saniya345@gmail.com">
+                    saniya345@gmail.com
+                </a>
+            </p>
+
+
+            <p>
+                📷 Instagram:
+                <a href="https://www.instagram.com/_artby_suff/"
+                   target="_blank">
+                    @_artby_suff
+                </a>
+            </p>
+
+
+            <br>
+
+
+            <a
+                href="https://wa.me/918792413157?text=Hi%20Artby%20Suff%2C%20I%20am%20interested%20in%20your%20artwork."
+                class="button">
+                Order / Enquire on WhatsApp
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 <span>Artby Suff</span>.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Islamic Art • Calligraphy • Décor
+        </p>
+
+    </footer>
+
+</body>
+</html>
